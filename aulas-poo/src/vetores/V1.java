@@ -4,7 +4,7 @@ public class V1 {
 
 	public static void main(String[] args) {
 
-		// decalaração completa em uma linha
+		// declaração completa em uma linha
 		int[] x = new int[12];
 
 		for (int i = 0; i < x.length; i++) {

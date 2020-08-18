@@ -11,9 +11,8 @@ public class Teste {
 		//System.out.println(counter(arr, 3));
 		//System.out.println(quasePalindromo("abccfg"));
 		System.out.println(numMaisPopular(arr, arr.length));
-
 	}
-	
+
 	private static int numMaisPopular(int[] numeros, int tamanho) {
 		Arrays.sort(numeros);
 		int num = numeros[0];
