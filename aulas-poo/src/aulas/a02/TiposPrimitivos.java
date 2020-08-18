@@ -1,4 +1,4 @@
-package outros;
+package aulas.a02;
 
 public class TiposPrimitivos {
 

@@ -1,4 +1,4 @@
-package outros;
+package aulas.a02;
 
 import java.io.BufferedReader;
 import java.io.IOException;
