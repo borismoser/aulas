@@ -6,6 +6,7 @@ public class CondicionalIf {
 
 	public static void main(String[] args) {
 
+		@SuppressWarnings("resource")
 		Scanner entrada = new Scanner(System.in);
 
 		System.out.print("Informe um número maior do que 0: ");
@@ -30,7 +31,7 @@ public class CondicionalIf {
 		} else {
 			System.out.println("O número informado é maior que 150.");
 		}
-
+		
 	}
 
 }

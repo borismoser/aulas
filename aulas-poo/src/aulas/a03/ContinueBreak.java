@@ -13,7 +13,6 @@ public class ContinueBreak {
 			System.out.printf("%d ", cont);
 		}
 		System.out.printf("%nQuebrou o FOR no contador = %d%n", cont);
-
 		
 		for (cont = 1; cont <= 10; cont++) {
 			if (cont == 5) {
