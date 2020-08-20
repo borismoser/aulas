@@ -1,8 +1,8 @@
-package vetores;
+package aulas.a04;
 
 import java.util.Arrays;
 
-public class V2 {
+public class ClasseArrays {
 
 	public static void main(String[] args) {
 		int[] x = new int[12];
