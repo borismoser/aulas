@@ -90,6 +90,7 @@ public class Vetores {
 		System.out.println("\nConteúdo de v3: " + texto);
 
 		// Copiando o conteúdo de um array para outro:
+
 		int[] v4 = Arrays.copyOf(v3, v3.length);
 		System.out.println("Conteúdo de v4: " + Arrays.toString(v4));
 
@@ -102,7 +103,7 @@ public class Vetores {
 			texto = "Não!";
 		}
 		System.out.println(texto);
-		
+
 		// Classificando o conteúdo de um array:
 		Arrays.sort(v4);
 		texto = Arrays.toString(v4);
@@ -113,7 +114,7 @@ public class Vetores {
 		System.out.print("Os arrays v3 e v4 são iguais? ");
 		texto = Arrays.equals(v3, v4) ? "Sim!" : "Não!";
 		System.out.println(texto);
-		
+
 		// Preenchendo um array com um determinado valor:
 		Arrays.fill(v4, 123);
 		texto = Arrays.toString(v4);

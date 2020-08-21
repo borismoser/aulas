@@ -86,10 +86,10 @@ public class Matrizes {
 		m4[1] = Arrays.copyOf(m2[1], m2[1].length);
 		texto = Arrays.deepToString(m4);
 		System.out.println("Conteúdo de m4: " + texto);
-		
+
 		// A igualdade de conteúdo deve utilizar 'deepEquals()':
 		System.out.println("m2 e m4 são iguais? " + Arrays.deepEquals(m2, m4));
-		
+
 		// A classificação pode ser feita dimensões simples:
 		Arrays.sort(m4[1]);
 		texto = Arrays.deepToString(m4);
