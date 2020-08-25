@@ -7,6 +7,7 @@ public class LerTecladoScanner {
 
 	public static void main(String[] args) throws IOException {
 
+		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 		
 		String saida = "Valor informado:";

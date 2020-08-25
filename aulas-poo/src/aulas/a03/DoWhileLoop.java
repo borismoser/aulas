@@ -6,6 +6,7 @@ public class DoWhileLoop {
 
 	public static void main(String[] args) {
 
+		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 		int num;
 
