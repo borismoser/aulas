@@ -3,6 +3,7 @@ package aulas.a05;
 public class MetodosVoid {
 
 	public static void main(String[] args) {
+
 		mostrarMenu();
 		
 		String palavra = "Palavra";
@@ -18,7 +19,7 @@ public class MetodosVoid {
 
 	// A instrução 'return' interrompe a execução do método imediatamente,
 	// devolvendo a execução para o ponto de chamada.
-	
+
 	private static void mostrarMenu() {
 		String menu =
 				"**************************\n" +
@@ -45,7 +46,5 @@ public class MetodosVoid {
 		numero = numero * 3;
 		System.out.println(numero);
 	}
-	
-	
 
 }

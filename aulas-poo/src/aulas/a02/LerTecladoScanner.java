@@ -9,7 +9,7 @@ public class LerTecladoScanner {
 
 		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
-		
+
 		String saida = "Valor informado:";
 
 		// Um método para ler cada tipo de dado:

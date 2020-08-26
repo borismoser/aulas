@@ -30,7 +30,7 @@ public class MetodosSobrecarregados {
 
 		String s = triploDe("Java!"); // chamada com parâmetro STRING
 		System.out.println(s);
-		
+
 	}
 
 	// A instrução 'return' devolve o controle ao ponto de chamada,

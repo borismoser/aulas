@@ -3,10 +3,11 @@ package aulas.a05;
 public class MetodosTipados {
 
 	public static void main(String[] args) {
-		int num = 120;
+		
+		int num = 123;
 		System.out.printf("%d %s", num, "é par? ");
 		System.out.println(numeroPar(num) ? "Sim" : "Não");
-
+		
 		int a = 1500;
 		int b = 1492;
 		int c = 1888;
