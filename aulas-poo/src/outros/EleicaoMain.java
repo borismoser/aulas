@@ -6,10 +6,10 @@ public class EleicaoMain {
 
 		System.out.println("Eleições: " + Eleicao.getQtdEleicoes());
 		
-		int eleitores = ler.lerInteiro("Número de eleitores: ");
-		int brancos = ler.lerInteiro("Número de votos brancos: ");
-		int nulos = ler.lerInteiro("Número de votos nulos: ");
-		int validos = ler.lerInteiro("Número de votos válidos: ");
+		int eleitores = Teclado.lerInt("Número de eleitores: ");
+		int brancos = Teclado.lerInt("Número de votos brancos: ");
+		int nulos = Teclado.lerInt("Número de votos nulos: ");
+		int validos = Teclado.lerInt("Número de votos válidos: ");
 		
 		Eleicao municipal = new Eleicao(eleitores, brancos, nulos, validos);
 		System.out.println("Eleições: " + Eleicao.getQtdEleicoes());
@@ -23,10 +23,10 @@ public class EleicaoMain {
 		System.out.printf("Votos válidos: %1.2f%%%n", pctValidos);
 
 		
-		eleitores = ler.lerInteiro("Número de eleitores: ");
-		brancos = ler.lerInteiro("Número de votos brancos: ");
-		nulos = ler.lerInteiro("Número de votos nulos: ");
-		validos = ler.lerInteiro("Número de votos válidos: ");
+		eleitores = Teclado.lerInt("Número de eleitores: ");
+		brancos = Teclado.lerInt("Número de votos brancos: ");
+		nulos = Teclado.lerInt("Número de votos nulos: ");
+		validos = Teclado.lerInt("Número de votos válidos: ");
 		
 		Eleicao estadual = new Eleicao(eleitores, brancos, nulos, validos);
 		System.out.println("Eleições: " + Eleicao.getQtdEleicoes());

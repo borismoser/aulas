@@ -2,7 +2,7 @@ package outros;
 
 import java.util.Scanner;
 
-public class ler {
+public class Teclado {
 
 	private static Scanner teclado = new Scanner(System.in);
 
@@ -18,7 +18,7 @@ public class ler {
 		return db;
 	}
 
-	public static int lerInteiro(String mensagem) {
+	public static int lerInt(String mensagem) {
 		System.out.print(mensagem);
 		int numero = teclado.nextInt();
 		return numero;
