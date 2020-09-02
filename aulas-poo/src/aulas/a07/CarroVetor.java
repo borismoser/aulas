@@ -10,6 +10,7 @@ public class CarroVetor {
 		Scanner ler = new Scanner(System.in);
 
 		Carro[] cars = new Carro[3];
+		
 		Carro c;
 		String modelo;
 		int ano;

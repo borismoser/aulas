@@ -2,12 +2,9 @@ package aulas.a07;
 
 public class Vendedor {
 
-	// Dados que podem ser alterados por get/set:
 	private String nome;
 	private double salarioFixo;
 	private double pctComissao;
-
-	// Dados mantidos internamente:
 	private double vendas;
 
 	public Vendedor(String nome, double salarioFixo, double pctComissao) {
@@ -16,21 +13,21 @@ public class Vendedor {
 		this.pctComissao = pctComissao;
 	}
 
-	public double totalSalario() {
-		return salarioFixo + this.totalComissao();
+	public double getSalarioTotal() {
+		return this.getSalarioFixo() + this.getComissao();
 	}
 
-	public double totalComissao() {
-		return vendas * pctComissao / 100;
+	public double getComissao() {
+		return this.getVendas() * this.getPctComissao() / 100;
 	}
 
-	public double totalVendas() {
-		return vendas;
+	public double getVendas() {
+		return this.vendas;
 	}
 
 	public void incluirVenda(double valor) {
 		if (valor > 0.0) {
-			vendas += valor;
+			this.vendas += valor;
 		}
 	}
 
@@ -46,16 +43,8 @@ public class Vendedor {
 		return salarioFixo;
 	}
 
-	public void setSalarioFixo(double salarioFixo) {
-		this.salarioFixo = salarioFixo;
-	}
-
 	public double getPctComissao() {
 		return pctComissao;
-	}
-
-	public void setPctComissao(double pctComissao) {
-		this.pctComissao = pctComissao;
 	}
 
 }

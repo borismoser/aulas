@@ -27,7 +27,7 @@ public class SalarioApp {
 		System.out.println("Funcionário            Fixo     Comissão        Total");
 		System.out.println("----------------   --------     --------    ---------");
 		System.out.printf("%-16s %,10.2f   %,10.2f %,12.2f  %n", //
-				vend.getNome(), vend.getSalarioFixo(), vend.totalComissao(), vend.totalSalario());
+				vend.getNome(), vend.getSalarioFixo(), vend.getComissao(), vend.getSalarioTotal());
 	}
 
 }

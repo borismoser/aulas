@@ -3,11 +3,14 @@ package aulas.a07;
 public class CarroMain {
 
 	public static void main(String[] args) {
+		
 		Carro carroA = new Carro("Ferrari GTO", 1975);
 		infoCarro(carroA);
+
 		carroA.setAno(1992);
 		carroA.setModelo("Monza SLE");
 		infoCarro(carroA);
+		
 		carroA.acelerar(120);
 		infoCarro(carroA);
 		carroA.reduzir(80.5);
