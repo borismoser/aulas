@@ -67,7 +67,9 @@ public class MatDemo {
 		// Hipotenusa
 		double hip = Math.hypot(3, 4);
 		System.out.printf("Hipotenusa hypot(3,4) = %f %n", hip);
-		// PI
+		System.out.println();
+
+		// A classe Math provê uma constante para PI:
 		System.out.printf("Pi = %.18f %n", Math.PI);
 		System.out.println();
 

@@ -6,15 +6,50 @@ import java.util.Scanner;
 public class ExLista04 {
 
 	public static void main(String[] args) {
-//		ex01();
-//		ex02();
-//		ex03();
-//		ex04();
-//		ex05();
-//		ex06();
-//		ex07();
-//		ex08();
-		ex09();
+
+		@SuppressWarnings("resource")
+		Scanner ler = new Scanner(System.in);
+		System.out.print("Informe o exercício (1 a 11): ");
+		int ex = ler.nextInt();
+
+		switch (ex) {
+		case 1:
+			ex01();
+			break;
+		case 2:
+			ex02();
+			break;
+		case 3:
+			ex03();
+			break;
+		case 4:
+			ex04();
+			break;
+		case 5:
+			ex05();
+			break;
+		case 6:
+			ex06();
+			break;
+		case 7:
+			ex07();
+			break;
+		case 8:
+			ex08();
+			break;
+		case 9:
+			ex09();
+			break;
+		case 10:
+			ex10();
+			break;
+		case 11:
+			ex11();
+			break;
+		default:
+			System.out.println("O exercício informado não foi implementado...");
+			break;
+		}
 	}
 
 	private static void ex01() {
@@ -217,15 +252,91 @@ public class ExLista04 {
 		Scanner ler = new Scanner(System.in);
 		System.out.print("Informe um texto: ");
 		String texto = ler.nextLine();
-		
-		char[] cars = texto.toCharArray();
-		Arrays.sort(cars);
-		System.out.println(Arrays.toString(cars));
+		String textoUp = texto.toUpperCase();
 
 		final String letras = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		char[] saida = new char[texto.length()];
-		for (int i=0; i<letras.length(); i++) {
-			
+		String saida = "";
+		for (int i = 0; i < letras.length(); i++) {
+			char c = letras.charAt(i);
+			int pos = textoUp.indexOf(c, 0);
+			while (pos >= 0) {
+				saida += texto.charAt(pos);
+				pos = textoUp.indexOf(c, pos + 1);
+			}
 		}
+		char[] vetor = saida.toCharArray();
+		System.out.println(Arrays.toString(vetor));
+	}
+
+	private static void ex10() {
+		System.out.println("\nExercício 10:");
+		int[] nums = new int[20];
+		for (int i = 0; i < nums.length; i++) {
+			nums[i] = (int) (Math.random() * 10);
+		}
+		System.out.println("Original = " + Arrays.toString(nums));
+		// Ordenando para facilitar a identificação dos repetidos.
+		Arrays.sort(nums);
+		System.out.println("Ordenado = " + Arrays.toString(nums));
+		String repetidos = "";
+		boolean repetiu = false;
+		for (int i = 1; i < nums.length; i++) {
+			if (nums[i] == nums[i - 1] && !repetiu) {
+				repetidos += nums[i] + " ";
+				repetiu = true;
+			}
+			if (nums[i] != nums[i - 1]) {
+				repetiu = false;
+			}
+		}
+		if (repetidos.isEmpty()) {
+			// Com números de 0 a 9 em um vetor de 20 posições,
+			// nunca deveria entrar nesta condição!
+			System.out.println("Não há números repetidos no vetor!");
+		} else {
+			System.out.println("Repetidos: " + repetidos);
+		}
+	}
+
+	private static void ex11() {
+		System.out.println("\nExercício 11:");
+		int[] va = new int[20];
+		int[] vb = new int[20];
+		for (int i = 0; i < va.length; i++) {
+			long n = Math.round(Math.random() * 100);
+			va[i] = (int) (n > 50 ? n - 50 : n);
+			n = Math.round(Math.random() * 100);
+			vb[i] = (int) (n > 50 ? n - 50 : n);
+		}
+
+		boolean[] vc = new boolean[51];
+		for (int i = 0; i < va.length; i++) {
+			vc[va[i]] = true;
+		}
+		boolean[] vd = new boolean[51];
+		for (int i = 0; i < vb.length; i++) {
+			vd[vb[i]] = true;
+		}
+
+		String emAmbos = "";
+		for (int i = 1; i < vc.length; i++) {
+			if (vc[i] && vd[i]) {
+				emAmbos += i + " ";
+			}
+		}
+		if (emAmbos.isEmpty()) {
+			System.out.println("Não há números iguais entre os vetores!");
+		} else {
+			System.out.println("Números em ambos: " + emAmbos);
+		}
+
+		System.out.println("A = " + Arrays.toString(va));
+		System.out.println("B = " + Arrays.toString(vb));
+		// Ordenando apenas para facilitar visualmente a identificação.
+		Arrays.sort(va);
+		Arrays.sort(vb);
+		System.out.println("Ordenado A = " + Arrays.toString(va));
+		System.out.println("Ordenado B = " + Arrays.toString(vb));
+
 	}
 }
