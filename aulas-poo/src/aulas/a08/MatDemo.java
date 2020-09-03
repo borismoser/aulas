@@ -77,7 +77,7 @@ public class MatDemo {
 		// o que permite um laço conforme demostrado abaixo:
 		System.out.println("Números aleatórios >= 0.0 e < 1.0:");
 		for (char c = 'a'; c <= 'e'; c++) {
-			System.out.println(c + ") " + Math.random());
+			System.out.println(c + ") " + Math.random() * 10);
 		}
 
 	}
