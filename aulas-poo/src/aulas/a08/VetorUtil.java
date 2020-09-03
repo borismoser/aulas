@@ -38,7 +38,7 @@ public class VetorUtil {
 		}
 		return maior;
 	}
-	
+
 	public static char maiorElemento(char[] vetor) {
 		char maior = 0;
 		for (char c : vetor) {
@@ -48,7 +48,7 @@ public class VetorUtil {
 		}
 		return maior;
 	}
-	
+
 	public static long somaVetor(long[] vetor) {
 		long soma = 0;
 		for (long n : vetor) {
@@ -56,7 +56,7 @@ public class VetorUtil {
 		}
 		return soma;
 	}
-	
+
 	public static double somaVetor(double[] vetor) {
 		double soma = 0;
 		for (double n : vetor) {
@@ -64,7 +64,7 @@ public class VetorUtil {
 		}
 		return soma;
 	}
-	
+
 	public static long[] somentePares(long[] vetor) {
 		if (vetor == null) {
 			return null;
@@ -82,7 +82,7 @@ public class VetorUtil {
 		}
 		return null;
 	}
-	
+
 	public static double[] somentePares(double[] vetor) {
 		if (vetor == null) {
 			return null;
@@ -100,7 +100,7 @@ public class VetorUtil {
 		}
 		return null;
 	}
-	
+
 	public static long[] somenteImpares(long[] vetor) {
 		if (vetor == null) {
 			return null;
@@ -118,7 +118,7 @@ public class VetorUtil {
 		}
 		return null;
 	}
-	
+
 	public static double[] somenteImpares(double[] vetor) {
 		if (vetor == null) {
 			return null;
@@ -136,4 +136,47 @@ public class VetorUtil {
 		}
 		return null;
 	}
+
+	public static int posicaoMaiorElemento(long[] vetor) {
+		int maior = 0;
+		for (int i = 0; i < vetor.length; i++) {
+			if (vetor[i] > vetor[maior]) {
+				maior = i;
+			}
+		}
+		return maior;
+	}
+
+	public static int posicaoMaiorElemento(double[] vetor) {
+		int maior = 0;
+		for (int i = 0; i < vetor.length; i++) {
+			if (vetor[i] > vetor[maior]) {
+				maior = i;
+			}
+		}
+		return maior;
+	}
+
+	public static int posicaoMaiorElemento(String[] vetor) {
+		int maior = 0;
+		for (int i = 0; i < vetor.length; i++) {
+			if (vetor[i] != null) {
+				if (vetor[i].length() > vetor[maior].length()) {
+					maior = i;
+				}
+			}
+		}
+		return maior;
+	}
+
+	public static int posicaoMaiorElemento(char[] vetor) {
+		int maior = 0;
+		for (int i = 0; i < vetor.length; i++) {
+			if (vetor[i] > vetor[maior]) {
+				maior = i;
+			}
+		}
+		return maior;
+	}
+	
 }
