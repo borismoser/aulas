@@ -178,5 +178,5 @@ public class VetorUtil {
 		}
 		return maior;
 	}
-	
+
 }

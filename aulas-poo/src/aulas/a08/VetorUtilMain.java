@@ -16,7 +16,7 @@ public class VetorUtilMain {
 		double maiorW = VetorUtil.maiorElemento(w);
 		System.out.println("Maior elemento no vetor w: " + maiorW);
 
-		String[] palavras = { "um", "dois", "três", "quatro", "Dez" };
+		String[] palavras = { "um", "dois", null, "três", "quatro", "Dez" };
 		System.out.println("\nVetor de palavras = " + Arrays.toString(palavras));
 		System.out.println("Maior elemento no vetor de palavras: " + //
 				VetorUtil.maiorElemento(palavras));
@@ -50,13 +50,13 @@ public class VetorUtilMain {
 
 		pos = VetorUtil.posicaoMaiorElemento(w);
 		System.out.println("Índice do maior elemento no vetor w: " + pos);
-		
+
 		pos = VetorUtil.posicaoMaiorElemento(palavras);
 		System.out.println("Índice do maior elemento no vetor de palavras: " + pos);
-		
+
 		pos = VetorUtil.posicaoMaiorElemento(letras);
 		System.out.println("Índice do maior elemento no vetor de letras: " + pos);
-		
+
 	}
 
 }
