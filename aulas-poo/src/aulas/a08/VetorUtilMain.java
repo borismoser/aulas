@@ -8,9 +8,27 @@ public class VetorUtilMain {
 
 		long[] v = { 90, 5, 55, 1, -123, 984, 0 };
 		System.out.println("Vetor v = " + Arrays.toString(v));
+		
 		long maiorV = VetorUtil.maiorElemento(v);
-		System.out.println("Maior elemento no vetor v: " + maiorV);
+		System.out.println("\nMaior elemento no vetor v: " + maiorV);
 
+		long somaV = VetorUtil.somaVetor(v);
+		System.out.println("\nSoma dos elementos do vetor v: " + somaV);
+
+		long[] paresV = VetorUtil.somentePares(v);
+		System.out.println("\nElementos pares no vetor v: " + Arrays.toString(paresV));
+
+		long somaPar = VetorUtil.somaVetor(paresV);
+		System.out.println("\nSoma dos elementos pares do vetor v: " + somaPar);
+
+		somaPar = VetorUtil.somaVetor( VetorUtil.somentePares(v) );
+		System.out.println("\nSoma dos elementos pares do vetor v: " + somaPar);
+		
+		somaPar = VetorUtil.somaVetor( new long[] { 8, 5, 4, 3} );
+		System.out.println("\nSoma dos elementos do vetor: " + somaPar);
+		
+		System.exit(0);
+		
 		double[] w = { 9.123, 5.426, 55.998, 10.0, 123.321, -984.0001, 0.5 };
 		System.out.println("\nVetor w = " + Arrays.toString(w));
 		double maiorW = VetorUtil.maiorElemento(w);
@@ -27,14 +45,8 @@ public class VetorUtilMain {
 		System.out.println("Maior elemento no vetor de letras: " + //
 				VetorUtil.maiorElemento(letras));
 
-		long somaV = VetorUtil.somaVetor(v);
-		System.out.println("\nSoma dos elementos do vetor v: " + somaV);
-
 		double somaW = VetorUtil.somaVetor(w);
 		System.out.println("\nSoma dos elementos do vetor w: " + somaW);
-
-		long[] paresV = VetorUtil.somentePares(v);
-		System.out.println("\nElementos pares no vetor v: " + Arrays.toString(paresV));
 
 		double[] paresW = VetorUtil.somentePares(w);
 		System.out.println("\nElementos pares no vetor w: " + Arrays.toString(paresW));

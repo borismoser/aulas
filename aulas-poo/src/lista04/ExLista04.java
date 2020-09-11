@@ -319,7 +319,7 @@ public class ExLista04 {
 		}
 
 		String emAmbos = "";
-		for (int i = 1; i < vc.length; i++) {
+		for (int i = 0; i < vc.length; i++) {
 			if (vc[i] && vd[i]) {
 				emAmbos += i + " ";
 			}

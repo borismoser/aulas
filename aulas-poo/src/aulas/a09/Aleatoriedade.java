@@ -23,11 +23,12 @@ public class Aleatoriedade {
 		Random rand = new Random();
 		System.out.println("Random Int     : " + rand.nextInt());
 		System.out.println("Random Int 0-99: " + rand.nextInt(100));
+		System.out.println("Random Int 15-25: " + (15 + rand.nextInt(11)));
+
 		System.out.println("Random Long    : " + rand.nextLong());
 		System.out.println("Random Float   : " + rand.nextFloat());
 		System.out.println("Random Double  : " + rand.nextDouble());
 		System.out.println("Random Boolean : " + rand.nextBoolean());
-
 		System.out.println("\nA classe SecureRandom gera diferentes tipos de números");
 		System.out.println("randômicos fortes. Permite controlar a faixa INT:\n");
 		SecureRandom srand = new SecureRandom();
@@ -58,6 +59,7 @@ public class Aleatoriedade {
 		geradorMathRandom(quantos);
 		duracao = System.nanoTime() - inicio;
 		System.out.printf("Math.random() demorou %,15d ns.%n", duracao);
+
 	}
 
 	private static void geradorMathRandom(int qt) {
