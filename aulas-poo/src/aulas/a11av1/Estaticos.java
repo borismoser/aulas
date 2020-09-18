@@ -6,11 +6,11 @@ public class Estaticos {
 		int tamanho = vetor.length;
 		int[] inv = new int[tamanho];
 		for (int i = 0; i < tamanho; i++) {
-			inv[i] = vetor[tamanho-1-i];
+			inv[i] = vetor[tamanho - 1 - i];
 		}
 		return inv;
 	}
-	
+
 	public static String stringVetor(char[] vetor) {
 		int tamanho = vetor.length;
 		String saida = "";

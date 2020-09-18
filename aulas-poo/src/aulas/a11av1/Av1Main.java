@@ -15,11 +15,13 @@ public class Av1Main {
 		p1.anoNascimento(2000);
 		System.out.printf("%s%s é maior de idade.%n", p1.getCpfFormatado(), //
 				p1.maiorIdade() ? "" : " não");
+
 		
-		int[] vet = { 9, 5, 3, 7, 1 };
+		int[] vet = { 9, 7, 1 };
 		System.out.println(Arrays.toString(vet));
 		System.out.println(Arrays.toString(Estaticos.vetorInvertido(vet)));
-		
+		System.out.println(Arrays.toString(vet));
+
 		char[] letras = "alfabeto".toCharArray();
 		System.out.println(Arrays.toString(letras));
 		System.out.println(Estaticos.stringVetor(letras));

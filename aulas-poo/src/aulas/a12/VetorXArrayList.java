@@ -33,12 +33,15 @@ public class VetorXArrayList {
 		// entenda-se como qualquer ArrayList.
 
 		ArrayList<Integer> lista = new ArrayList<Integer>();
+
 		System.out.println("\nLista = " + lista);
 		System.out.println("Tamanho da Lista = " + lista.size());
 
 		// O método add() insere um elemento no final da lista.
 		for (int i = 0; i < vetor.length; i++) {
+
 			lista.add(vetor[i]);
+
 		}
 		System.out.println("\nLista = " + lista);
 		System.out.println("Tamanho da Lista = " + lista.size());
@@ -59,6 +62,7 @@ public class VetorXArrayList {
 		// O primeiro elemento de um lista tem índice ZERO e seu
 		// tamanho total é obtido pelo método size().
 		for (int i = 0; i < lista.size(); i++) {
+
 			int num = lista.get(i);
 			System.out.printf("%d ", num);
 		}
@@ -96,6 +100,7 @@ public class VetorXArrayList {
 		// Além de remover um elemento de uma posição específica,
 		// é possível remover a primeira ocorrência de um elemento
 		// que contenha um determinado VALOR:
+
 		if (lista.remove(Integer.valueOf(888))) {
 			System.out.println("\nLista = " + lista);
 			System.out.println("Tamanho da Lista = " + lista.size());
@@ -109,7 +114,7 @@ public class VetorXArrayList {
 		// posição a alterar e o valor, com o método set().
 
 		// Alterando a posição 2 para o valor 5000:
-		lista.set(2, 5000);
+		lista.set(2, 55);
 		System.out.println("\nLista = " + lista);
 		System.out.println("Tamanho da Lista = " + lista.size());
 
@@ -130,6 +135,7 @@ public class VetorXArrayList {
 
 		// Uma lista pode ser facilmente ordenada de forma ascendente
 		// ou descendente usando o método sort() da classe Collections:
+
 		Collections.sort(lista);
 		System.out.println("\nLista crescente = " + lista);
 
@@ -146,7 +152,7 @@ public class VetorXArrayList {
 			System.out.println("A lista não contém elemento algum.");
 		}
 
-		// Quando nada é especificado no construtos, os ArrayLists são
+		// Quando nada é especificado no construtor, os ArrayLists são
 		// criados com a capacidade default de 10 elementos.
 		// Quando tentarmos adicionar o 11º elemento, a estrutura interna
 		// de armazenamento será redimensionada para se adequar à necessidade.
