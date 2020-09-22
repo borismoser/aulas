@@ -1,4 +1,4 @@
-package aulas.a12;
+package outros;
 
 import java.util.ArrayList;
 import java.util.Collection;
