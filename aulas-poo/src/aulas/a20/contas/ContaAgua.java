@@ -21,7 +21,7 @@ public class ContaAgua extends Conta {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(getConsumidor(), metrosCubicos);
+		return Objects.hash(getConsumidor(), getValorDevido(), metrosCubicos);
 	}
 
 	@Override
@@ -37,6 +37,7 @@ public class ContaAgua extends Conta {
 		}
 		ContaAgua outraConta = (ContaAgua) obj;
 		return metrosCubicos == outraConta.metrosCubicos && //
+				this.getValorDevido() == outraConta.getValorDevido() && //
 				Objects.equals(getConsumidor(), outraConta.getConsumidor());
 	}
 

@@ -25,7 +25,7 @@ public class ContaMain {
 		ce = new ContaEletricidade(con, 185.00, 215.11);
 		incluir(con, ce);
 		
-		Consumidor con2 = new Consumidor("Outro Cidadão Pagador de Contas");
+		Consumidor con2 = new Consumidor("Outro Pagador de Contas");
 		incluir(con2, ce);
 	}
 	

@@ -37,6 +37,7 @@ public class ContaEletricidade extends Conta {
 		}
 		ContaEletricidade outraConta = (ContaEletricidade) obj;
 		return kilowatts == outraConta.kilowatts && //
+				getValorDevido() == outraConta.getValorDevido() && //
 				Objects.equals(getConsumidor(), outraConta.getConsumidor());
 	}
 

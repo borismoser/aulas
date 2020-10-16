@@ -41,6 +41,7 @@ public class ContaTelefone extends Conta {
 		ContaTelefone outraConta = (ContaTelefone) obj;
 		return minutosLocais == outraConta.minutosLocais && //
 				minutosLongaDistancia == outraConta.minutosLongaDistancia && //
+				getValorDevido() == outraConta.getValorDevido() && //
 				Objects.equals(getConsumidor(), outraConta.getConsumidor());
 	}
 
