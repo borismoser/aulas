@@ -43,4 +43,11 @@ public class Nacional extends Produto {
 		return categoria;
 	}
 
+	@Override
+	public String toString() {
+		return "[getCodigo()=" + getCodigo() + ", getDescricao()=" + getDescricao() + //
+				", categoria=" + categoria + ", getPrecoFinal()=" + getPrecoFinal() + //
+				", getPrecoCusto()=" + getPrecoCusto() + "]";
+	}
+
 }

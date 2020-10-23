@@ -35,4 +35,11 @@ public class Importado extends Produto {
 				getCodigo() == other.getCodigo();
 	}
 
+	@Override
+	public String toString() {
+		return "[getCodigo()=" + getCodigo() + ", getDescricao()=" + getDescricao() + //
+				", taxaImportacao=" + taxaImportacao + ", getPrecoMinimo()=" + getPrecoMinimo() + //
+				", getPrecoCusto()=" + getPrecoCusto() + "]";
+	}
+
 }
