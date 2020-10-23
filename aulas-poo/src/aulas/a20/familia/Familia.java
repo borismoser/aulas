@@ -8,6 +8,7 @@ public class Familia {
 		Pessoa pai = new Pessoa("meu pai");
 		Pessoa mae = new Pessoa("minha mãe");
 		Pessoa irmao = new Pessoa("meu irmão");
+		Pessoa paiDoPai = new Pessoa("meu avô paterno");
 
 		eu.setPai(pai);
 		eu.setMae(mae);
@@ -15,7 +16,9 @@ public class Familia {
 		irmao.setPai(pai);
 		irmao.setMae(mae);
 		
-		System.out.println(eu.getIrmaos());
+		pai.setPai(paiDoPai);
+		
+		System.out.println(eu);
 		System.out.println(pai);
 		System.out.println(mae);
 		System.out.println(irmao);

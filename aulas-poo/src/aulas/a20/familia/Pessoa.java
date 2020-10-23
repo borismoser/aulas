@@ -31,17 +31,29 @@ public class Pessoa {
 	public void setPai(Pessoa pai) {
 		if (Objects.equals(this.pai, pai))
 			return;
-		// retirar este filho da lista do pai anterior (se houver)
-		// incluir este filho na lista do pai
-		this.pai = pai;
+		if (this.pai != null) {
+			this.pai.getFilhos().remove(this);
+		}
+		if (pai != null) {
+			this.pai = pai;
+			this.pai.addFilho(this);
+		} else {
+			this.pai = null;
+		}		
 	}
 
 	public void setMae(Pessoa mae) {
 		if (Objects.equals(this.mae, mae))
 			return;
-		// retirar este filho da lista da mãe anterior (se houver)
-		// incluir este filho na lista da mãe
-		this.mae = mae;
+		if (this.mae != null) {
+			this.mae.getFilhos().remove(this);
+		}
+		if (mae != null) {
+			this.mae = mae;
+			this.mae.addFilho(this);
+		} else {
+			this.mae = null;
+		}		
 	}
 
 	private boolean addFilho(Pessoa umFilho) {
