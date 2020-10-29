@@ -1,4 +1,5 @@
 package aulas.a22av2.q1;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -19,8 +20,7 @@ public class Usuario {
 	public boolean trocarSenha(String senhaAtual, String senhaNova) {
 		if (senhaNova == null)
 			return false;
-		if (!senhasUtilizadas.get(0).equals(senhaAtual))
-			return false;
+		if (!loginOK(senhaAtual))	return false;
 		if (senhasUtilizadas.contains(senhaNova))
 			return false;
 		if (senhasUtilizadas.size() == 5)

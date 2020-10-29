@@ -22,12 +22,12 @@ class UsuarioTest {
 	private static String senhaAtual() {
 		return SENHA_USUARIO;
 	}
-	
+
 	private static String novaSenha(String pwd) {
 		SENHA_USUARIO = pwd;
 		return SENHA_USUARIO;
 	}
-	
+
 	@DisplayName("Usuário não pode ter nome nulo.")
 	@Order(1)
 	@Test
@@ -74,75 +74,77 @@ class UsuarioTest {
 	void testLoginOK() {
 		assertTrue(USU.loginOK(senhaAtual()));
 	}
-	
+
 	@DisplayName("Login incorreto após troca de senha.")
 	@Order(9)
 	@Test
 	void testLoginNOK() {
 		assertFalse(USU.loginOK("xyz"));
 	}
-	
+
 	@DisplayName("Segunda troca de senha.")
 	@Order(10)
 	@Test
 	void testTrocarSenha2() {
 		assertTrue(USU.trocarSenha(senhaAtual(), novaSenha("qwerty")));
 	}
-	
+
 	@DisplayName("Tentativa de troca de senha igual à atual.")
 	@Order(11)
 	@Test
 	void testTrocarSenha3() {
 		assertFalse(USU.trocarSenha(senhaAtual(), senhaAtual()));
 	}
-	
+
 	@DisplayName("Tentativa de troca de senha igual a uma anterior.")
 	@Order(12)
 	@Test
 	void testTrocarSenha4() {
 		assertFalse(USU.trocarSenha(senhaAtual(), "a1s2d3"));
 	}
-	
+
 	@DisplayName("Terceira troca de senha.")
 	@Order(13)
 	@Test
 	void testTrocarSenha5() {
 		assertTrue(USU.trocarSenha(senhaAtual(), novaSenha("h6g5f4")));
 	}
-	
+
 	@DisplayName("Quarta troca de senha.")
 	@Order(14)
 	@Test
 	void testTrocarSenha6() {
 		assertTrue(USU.trocarSenha(senhaAtual(), novaSenha("c9v8b7")));
 	}
-	
+
 	@DisplayName("Quinta troca de senha.")
 	@Order(15)
 	@Test
 	void testTrocarSenha7() {
 		assertTrue(USU.trocarSenha(senhaAtual(), novaSenha("n3b4v5")));
 	}
-	
+
 	@DisplayName("Sexta troca de senha: tentativa de colocar a primeira novamente.")
 	@Order(16)
 	@Test
 	void testTrocarSenha8() {
 		assertTrue(USU.trocarSenha(senhaAtual(), novaSenha("q1w2e3")));
 	}
-	
+
 	@DisplayName("Tentativa de troca de senha com a atual incorreta.")
 	@Order(17)
 	@Test
 	void testTrocarSenha9() {
-		assertFalse(USU.trocarSenha("senha errada", novaSenha("000000x")));
+		Usuario u = new Usuario("x", "y");
+		assertFalse(u.trocarSenha("z", "w"));
 	}
-	
+
 	@DisplayName("Tentativa de troca de senha nula.")
 	@Order(18)
 	@Test
 	void testTrocarSenha10() {
-		assertFalse(USU.trocarSenha("senha errada", null));
+		Usuario u = new Usuario("x", "y");
+		assertFalse(u.trocarSenha("y", null));
 	}
-}
 
+}
