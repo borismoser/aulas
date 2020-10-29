@@ -7,11 +7,6 @@ import org.junit.jupiter.api.Test;
 class TstUsuario {
 
 	@Test
-	void testUsuario() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	void testLoginOK() {
 		Usuario u = new Usuario("eu", "senha");
 		assertTrue(u.loginOK("senha"));
