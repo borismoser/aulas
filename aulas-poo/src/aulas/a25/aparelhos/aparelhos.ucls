@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="aulas.a25.aparelhos.modelagem.Televisor" project="aulas-poo" 
     file="/aulas-poo/src/aulas/a25/aparelhos/modelagem/Televisor.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="157" y="518"/>    
+    <position height="-1" width="-1" x="110" y="340"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="aulas.a25.aparelhos.modelagem.BluRay" project="aulas-poo" 
     file="/aulas-poo/src/aulas/a25/aparelhos/modelagem/BluRay.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="507" y="527"/>    
+    <position height="-1" width="-1" x="557" y="336"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="aulas.a25.aparelhos.app.AppMain" project="aulas-poo" 
     file="/aulas-poo/src/aulas/a25/aparelhos/app/AppMain.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="585" y="135"/>    
+    <position height="-1" width="-1" x="337" y="417"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

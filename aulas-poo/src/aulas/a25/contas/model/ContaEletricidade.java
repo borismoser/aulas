@@ -1,4 +1,4 @@
-package aulas.a25.contas;
+package aulas.a25.contas.model;
 
 import java.util.Objects;
 

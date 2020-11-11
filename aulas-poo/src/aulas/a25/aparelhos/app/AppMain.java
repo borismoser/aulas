@@ -31,7 +31,7 @@ public class AppMain {
 
 		Aparelho ap1 = new Televisor("tv a", "mod a1", 33);
 		Aparelho ap2 = new BluRay("bluray b", "mod br1");
-
+		
 		// Ao tratar objetos através de polimorfismo, ficam
 		// disponíveis apenas os métodos comuns à classe que contém
 		// as referências. Neste caso, os métodos da classe Aparelho:
@@ -59,6 +59,7 @@ public class AppMain {
 		// O operador instanceof verifica se uma referência é
 		// compatível com uma determinada classe:
 
+
 		if (ap1 instanceof Televisor) {
 			Televisor ap3 = (Televisor) ap1;
 			System.out.println("Classe de ap3: " + ap3.getClass().getSimpleName());
@@ -80,14 +81,15 @@ public class AppMain {
 		// Televisor umaTV = ap1;
 
 		// Fazer cast para um tipo incompatível não gera erro de compilação,
-		// mas gera uma exceção ao tentar chamar um método:
+		// mas gera uma exceção:
 
-		// BluRay umBR = (BluRay) ap1;
-		// umBR.onOff(); // ClassCastException
+		// BluRay umBR = (BluRay) ap1;  // ClassCastException
+		// umBR.onOff();
 
 		// Um uso comum de polimorfismo é o armazenamento
 		// de objetos de diferentes tipos em coleções
 		// de tipos compatíveis:
+
 
 		ArrayList<Aparelho> lista = new ArrayList<>();
 
@@ -106,6 +108,7 @@ public class AppMain {
 		br = new BluRay("Philco", "P900");
 		lista.add(br);
 
+
 		// É possível percorrer a lista de aparelhos e ligar
 		// todos eles, independentemente do tipo original,
 		// pois o método onOff() está na classe Aparelho:
@@ -120,6 +123,7 @@ public class AppMain {
 		for (Aparelho aa : lista) {
 			if (aa instanceof Televisor) {
 				tv = (Televisor) aa; // Podemos fazer o cast para uma variável...
+				tv.canalMenos();
 				tv.setCanal(123);
 			} else if (aa instanceof BluRay) {
 				((BluRay) aa).eject(); // ...ou anonimamente (sem variável).

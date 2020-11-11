@@ -1,8 +1,8 @@
-package aulas.a25.contas;
+package aulas.a25.contas.model;
 
 import java.util.Objects;
 
-public class Conta {
+public abstract class Conta {
 
 	private Consumidor consumidor;
 	private double valorDevido;
