@@ -67,9 +67,12 @@ public class Main {
 		Retangulo ret = new Retangulo("um retangulo", 3, 9);
 		System.out.println("Perímetro do retângulo: " + ret.getPerimetro());
 		System.out.println("Área do retângulo: " + ret.getArea());
+		System.out.println("Lado maior do retângulo: " + ret.getLadoMaior());
+		System.out.println("Lado menor do retângulo: " + ret.getLadoMenor());
 		System.out.println();
-
+		
 		Quadrado qua = new Quadrado("um quadrado", 5);
+		System.out.println("Lado do quadrado: " + qua.getLado());
 		Paralelogramo parQua = qua;
 		System.out.println("Perímetro do quadrado: " + parQua.getPerimetro());
 		System.out.println("Área do quadrado: " + parQua.getArea());

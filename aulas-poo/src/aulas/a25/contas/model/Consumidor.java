@@ -1,6 +1,7 @@
 package aulas.a25.contas.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Objects;
 
 public class Consumidor {
@@ -8,6 +9,7 @@ public class Consumidor {
 	private String nome;
 
 	private ArrayList<Conta> contas = new ArrayList<>();
+	//private HashSet<Conta> setContas = new HashSet<>();
 
 	public Consumidor(String nome) {
 		this.nome = Objects.requireNonNull(nome);
@@ -18,6 +20,7 @@ public class Consumidor {
 	}
 
 	public Status novaConta(Conta conta) {
+		//setContas.add(conta);
 		if (!this.equals(conta.getConsumidor()))
 			return Status.CONSUMIDOR_INCORRETO;
 		if (contas.contains(conta))

@@ -6,4 +6,12 @@ public final class Retangulo extends Paralelogramo {
 		super(nome, ladoA, ladoB);
 	}
 
+	public double getLadoMaior() {
+		return (getLadoA() > getLadoB() ? getLadoA() : getLadoB());
+	}
+	
+	public double getLadoMenor() {
+		return (getLadoA() < getLadoB() ? getLadoA() : getLadoB());
+	}
+
 }

@@ -7,7 +7,7 @@ public class Quadrado extends Paralelogramo {
 	}
 	
 	public double getLado() {
-		return super.getLadoA();
+		return getLadoA();
 	}
 
 	@Override
