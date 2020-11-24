@@ -1,7 +1,7 @@
 package aulas.a27.modelo;
 
 public final class Mensalista extends Empregado {
-	
+
 	private double salarioMensal;
 
 	public Mensalista(String nome, double salarioMensal) {
@@ -10,12 +10,12 @@ public final class Mensalista extends Empregado {
 	}
 
 	@Override
-	public final double getSalarioBruto() {
+	public double getSalarioBruto() {
 		return salarioMensal;
 	}
 
-	public final double getSalarioMensal() {
+	public double getSalarioMensal() {
 		return salarioMensal;
 	}
-	
+
 }

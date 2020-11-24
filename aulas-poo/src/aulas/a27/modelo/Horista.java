@@ -16,7 +16,7 @@ public final class Horista extends Empregado {
 		if (horasTrabalhadas <= 40) {
 			return salarioHora * horasTrabalhadas;
 		} else {
-			return 40 * salarioHora + (horasTrabalhadas - 40) * salarioHora * 1.5;
+			return (40 * salarioHora) + ((horasTrabalhadas - 40) * salarioHora * 1.5);
 		}
 	}
 
