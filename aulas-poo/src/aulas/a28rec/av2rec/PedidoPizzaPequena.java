@@ -17,7 +17,7 @@ public class PedidoPizzaPequena extends PedidoPizza {
 
 	@Override
 	public double getPreco() {
-		return 30 * getQuantidade();
+		return getQuantidade() * 30 + super.getPreco();
 	}
 
 	@Override

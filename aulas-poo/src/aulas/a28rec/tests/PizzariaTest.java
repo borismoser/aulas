@@ -103,12 +103,14 @@ public class PizzariaTest {
 	void testGetValorTotalPedidos() {
 		PedidoPizzaPequena p = new PedidoPizzaPequena(CLI, FormaEntrega.BALCAO, 1, Sabor.BACON);
 		PZ.novoPedido(p);
+		p = new PedidoPizzaPequena(CLI, FormaEntrega.DELIVERY, 1, Sabor.CALABRESA);
+		PZ.novoPedido(p);
 		PedidoPizzaMedia m = new PedidoPizzaMedia(CLI, FormaEntrega.BALCAO, 1, Sabor.BACON, Sabor.CALABRESA);
 		PZ.novoPedido(m);
 		PedidoPizzaGrande g = new PedidoPizzaGrande(CLI, FormaEntrega.BALCAO, 1, Sabor.BACON, Sabor.CALABRESA,
 				Sabor.PORTUGUESA);
 		PZ.novoPedido(g);
-		assertEquals(120.0, PZ.getValorTotalPedidos());
+		assertEquals(155.0, PZ.getValorTotalPedidos());
 	}
 
 }

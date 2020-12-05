@@ -1,5 +1,7 @@
 package aulas.a28rec.av2rec;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Objects;
 
 public class PedidoPizzaGrande extends PedidoPizza {
@@ -30,7 +32,7 @@ public class PedidoPizzaGrande extends PedidoPizza {
 
 	@Override
 	public double getPreco() {
-		return 50;
+		return getQuantidade() * 50 + super.getPreco();
 	}
 
 	@Override
@@ -50,7 +52,21 @@ public class PedidoPizzaGrande extends PedidoPizza {
 		if (getClass() != obj.getClass())
 			return false;
 		PedidoPizzaGrande other = (PedidoPizzaGrande) obj;
-		return sabor1 == other.sabor1 && sabor2 == other.sabor2 && sabor3 == other.sabor3;
+		
+		ArrayList<Sabor> saborThis = new ArrayList<>();
+		saborThis.add(sabor1);
+		saborThis.add(sabor2);
+		saborThis.add(sabor3);
+		
+		ArrayList<Sabor> saborOther = new ArrayList<>();
+		saborOther.add(other.sabor1);
+		saborOther.add(other.sabor2);
+		saborOther.add(other.sabor3);
+
+		Collections.sort(saborThis);
+		Collections.sort(saborOther);
+		
+		return saborThis.equals(saborOther);
 	}
 
 }

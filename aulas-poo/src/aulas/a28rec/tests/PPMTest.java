@@ -126,7 +126,7 @@ class PPMTest {
 	@DisplayName("Pedidos de pizzas Medias de sabores iguais em ordens diferentes")
 	@Test
 	void testEqualsOrdemSabor() {
-		PedidoPizzaMedia p = new PedidoPizzaMedia(CLI1, FormaEntrega.DELIVERY, 1, Sabor.NAPOLITANA, Sabor.PORTUGUESA);
+		PedidoPizzaMedia p = new PedidoPizzaMedia(CLI1, FormaEntrega.BALCAO, 1, Sabor.NAPOLITANA, Sabor.PORTUGUESA);
 		assertEquals(PPM, p);
 	}
 	
@@ -139,7 +139,7 @@ class PPMTest {
 	@DisplayName("Get Sabor 2 pizza Media")
 	@Test
 	void testGetSabor2() {
-		assertEquals(Sabor.NAPOLITANA, PPM.getsabor2());
+		assertEquals(Sabor.NAPOLITANA, PPM.getSabor2());
 	}
 	
 }

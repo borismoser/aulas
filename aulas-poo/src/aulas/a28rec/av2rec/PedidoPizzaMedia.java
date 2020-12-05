@@ -24,7 +24,7 @@ public class PedidoPizzaMedia extends PedidoPizza {
 
 	@Override
 	public double getPreco() {
-		return 40;
+		return getQuantidade() * 40 + super.getPreco();
 	}
 
 	@Override

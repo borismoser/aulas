@@ -38,8 +38,23 @@ public class Pizzaria {
 	public String getNomePizzaria() {
 		return nomePizzaria;
 	}
-	
+
 	public double getValorTotalPedidos() {
-		return 0.0;
+		double total = 0.0;
+		/*
+				pedidosP.stream().mapToDouble(p -> p.getPreco()).sum()
+				+ pedidosM.stream().mapToDouble(p -> p.getPreco()).sum()
+				+ pedidosG.stream().mapToDouble(p -> p.getPreco()).sum();
+				*/
+		for (PedidoPizzaPequena p : pedidosP) {
+			total += p.getPreco();
+		}
+		for (PedidoPizzaMedia p : pedidosM) {
+			total += p.getPreco();
+		}
+		for (PedidoPizzaGrande p : pedidosG) {
+			total += p.getPreco();
+		}
+		return total;
 	}
 }

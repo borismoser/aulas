@@ -11,7 +11,7 @@ public class PedidoPizza {
 	public PedidoPizza(Cliente cliente, FormaEntrega entrega, int quantidade) {
 		this.cliente = Objects.requireNonNull(cliente);
 		this.entrega = entrega;
-		this.quantidade = quantidade;
+		this.quantidade = quantidade < 1 ? 1 : quantidade;
 	}
 
 	public Cliente getCliente() {
@@ -27,7 +27,7 @@ public class PedidoPizza {
 	}
 
 	public double getPreco() {
-		return 0.0;
+		return entrega == FormaEntrega.BALCAO ? 0.0 : 5.0;
 	}
 
 	@Override

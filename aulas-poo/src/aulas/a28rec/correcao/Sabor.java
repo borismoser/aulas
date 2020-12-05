@@ -5,6 +5,5 @@ public enum Sabor {
 	PORTUGUESA,
 	CALABRESA,
 	NAPOLITANA,
-	BACON;
-	
+	BACON
 }

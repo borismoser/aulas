@@ -136,7 +136,7 @@ class PPGTest {
 	@DisplayName("Pedidos de pizzas Grandes de sabores iguais em ordens diferentes")
 	@Test
 	void testEqualsOrdemSabor() {
-		PedidoPizzaGrande p = new PedidoPizzaGrande(CLI1, FormaEntrega.DELIVERY, 1, Sabor.NAPOLITANA, Sabor.PORTUGUESA,
+		PedidoPizzaGrande p = new PedidoPizzaGrande(CLI1, FormaEntrega.BALCAO, 1, Sabor.NAPOLITANA, Sabor.PORTUGUESA,
 				Sabor.BACON);
 		assertEquals(PPG, p);
 	}
@@ -158,5 +158,5 @@ class PPGTest {
 	void testGetSabor3() {
 		assertEquals(Sabor.BACON, PPG.getSabor3());
 	}
-	
+
 }

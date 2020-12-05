@@ -4,37 +4,35 @@ import java.util.Objects;
 
 public class PedidoPizza {
 
+	private Cliente cliente;
+	private FormaEntrega entrega;
 	private int quantidade;
-	private Cliente nome;
-	private Cliente telefone;
-	private FormaEntrega formaEntrega;
-	private double preco;
-	
-	public PedidoPizza(Cliente nome, FormaEntrega entrega, int quantidade) {
-		this.quantidade = quantidade;
-		this.nome = nome;
-		this.formaEntrega = entrega;
-	}
-	
-	public Cliente getCliente() {
-		return nome;
+
+	public PedidoPizza(Cliente cliente, FormaEntrega entrega, int quantidade) {
+		this.cliente = Objects.requireNonNull(cliente);
+		this.entrega = entrega;
+		this.quantidade = quantidade < 1 ? 1 : quantidade;
 	}
 
-	public double getPreco() {
-		return preco;
+	public Cliente getCliente() {
+		return cliente;
 	}
-	
+
 	public FormaEntrega getEntrega() {
-		return formaEntrega;
+		return entrega;
 	}
 
 	public int getQuantidade() {
 		return quantidade;
 	}
 
+	public double getPreco() {
+		return entrega == FormaEntrega.BALCAO ? 0.0 : 5.0;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(nome, quantidade, telefone);
+		return Objects.hash(cliente, entrega, quantidade);
 	}
 
 	@Override
@@ -46,11 +44,8 @@ public class PedidoPizza {
 		if (getClass() != obj.getClass())
 			return false;
 		PedidoPizza other = (PedidoPizza) obj;
-		return Objects.equals(nome, other.nome) && quantidade == other.quantidade
-				&& Objects.equals(telefone, other.telefone);
+		return Objects.equals(cliente, other.cliente) && entrega == other.entrega && quantidade == other.quantidade;
 	}
-	
-	
-	
+
 	
 }

@@ -6,16 +6,16 @@ public class Cliente {
 
 	private String nome;
 	private int telefone;
-	
+
 	public Cliente(String nome, int telefone) {
-		this.nome = nome;
+		this.nome = Objects.requireNonNull(nome);
 		this.telefone = telefone;
 	}
 
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public int getTelefone() {
 		return telefone;
 	}
@@ -27,20 +27,14 @@ public class Cliente {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) {
+		if (this == obj)
 			return true;
-		}
-		if (obj == null) {
+		if (obj == null)
 			return false;
-		}
-		if (getClass() != obj.getClass()) {
+		if (getClass() != obj.getClass())
 			return false;
-		}
 		Cliente other = (Cliente) obj;
-		return Objects.equals(this.nome, other.nome) && this.telefone == other.telefone;
+		return Objects.equals(nome, other.nome) && telefone == other.telefone;
 	}
-	
-	
-	
-	
+
 }

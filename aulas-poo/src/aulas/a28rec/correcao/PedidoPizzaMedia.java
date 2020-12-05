@@ -4,39 +4,34 @@ import java.util.Objects;
 
 public class PedidoPizzaMedia extends PedidoPizza {
 
-	private Sabor sabor;
+	private Sabor sabor1;
 	private Sabor sabor2;
-	
-	
-	public PedidoPizzaMedia(Cliente nome, FormaEntrega entrega, int quantidade, Sabor sabor, Sabor sabor2) {
-		super(nome, entrega, quantidade);
-		this.sabor = sabor;
+
+	public PedidoPizzaMedia(Cliente cliente, FormaEntrega entrega, int quantidade, //
+			Sabor sabor1, Sabor sabor2) {
+		super(cliente, entrega, quantidade);
+		this.sabor1 = sabor1;
 		this.sabor2 = sabor2;
 	}
 
 	public Sabor getSabor1() {
-		return sabor;
+		return sabor1;
 	}
-	
-	public Sabor getsabor2() {
+
+	public Sabor getSabor2() {
 		return sabor2;
 	}
-	
+
+	@Override
 	public double getPreco() {
-		if(this.getQuantidade() <= 0) {
-			return 1;
-		} else if (this.getEntrega() == FormaEntrega.DELIVERY) {
-			return this.getQuantidade() * 40 + 5;			
-		} else {
-			return this.getQuantidade() * 40;
-		}
+		return getQuantidade() * 40 + super.getPreco();
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + Objects.hash(sabor, sabor2);
+		result = prime * result + Objects.hash(sabor1, sabor2);
 		return result;
 	}
 
@@ -49,12 +44,8 @@ public class PedidoPizzaMedia extends PedidoPizza {
 		if (getClass() != obj.getClass())
 			return false;
 		PedidoPizzaMedia other = (PedidoPizzaMedia) obj;
-		if (super.getCliente() != other.getCliente())
-			return false;
-		if (super.getEntrega() != other.getEntrega()) 
-			return false;
-		if (super.getQuantidade() != other.getQuantidade())
-			return false;
-		return sabor == other.sabor && sabor2 == other.sabor2;
+		return ((sabor1 == other.sabor1 && sabor2 == other.sabor2) || // ;
+				(sabor1 == other.sabor2 && sabor2 == other.sabor1));
 	}
+
 }
