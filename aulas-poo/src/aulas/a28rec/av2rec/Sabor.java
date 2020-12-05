@@ -1,4 +1,4 @@
-package aulas.a28rec;
+package aulas.a28rec.av2rec;
 
 public enum Sabor {
 

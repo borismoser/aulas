@@ -1,0 +1,31 @@
+Implementar um sistema de controle de entrada de pedidos de uma pizzaria.
+
+Essa pizzaria organiza sua produção em filas conforme o tamanho da pizza solicitada, sendo que não podem existir pedidos repetidos em nenhuma das filas.
+
+A implementação deve seguir as especificações, assim como o diagrama de classes colocados a seguir.
+
+Especificações
+
+* Um pedido de pizza está repetido sempre que as características da superclasse (cliente, forma de entrega e quantidade) forem iguais, juntamente com as características de cada pedido específico, sendo:
+** pedido de pizza pequena (apenas 1 sabor): está repetido quando o sabor for igual;
+** pedido de pizza média (até 2 sabores diferentes): está repetido quando ambos os sabores forem iguais (em qualquer ordem);
+** pedido de pizza grande (até 3 sabores diferentes): está repetido quando os três sabores forem iguais (em qualquer ordem).
+* Os métodos novoPedido() da Pizzaria devem retornar false quando o pedido já existir na sua respectiva lista, o que impede que seja novamente incluído; devem retornar true quando o pedido ainda não existir e incluí-lo no final da lista apropriada.
+
+* O nome do cliente e da pizzaria são obrigatórios, e um pedido deve obrigatoriamente ter um cliente.
+
+* Um pedido deve conter a quantidade de pizzas que o cliente deseja com aquele mesmo tamanho e composição de sabores. Caso seja recebida uma quantidade menor do que 1 (um), deve-se considerar que a quantidade é 1 (um).
+
+* Os sabores de um pedido não precisam ser todos diferentes, mas é obrigatório informar todos.
+
+* Uma pizza pequena custa $30; uma média, $40 e uma grande, $50. Pedidos para delivery têm uma taxa de $5, independentemente da quantidade de pizzas.
+
+* O método getValorTotalPedidos() deve retornar a soma do preço de todos os pedidos, incluindo taxa de entrega (quando houver).
+
+Critérios de avaliação
+
+* Correta definição das classes e implementação de seus construtores: 8,0
+* Correta implementação de equals() e hashCode(): 8,0
+* Correta implementação da lógica de controle dos pedidos: 8,0
+* Correta implementação dos métodos getPreco(): 8,0
+* Correta implementação do método getValorTotalPedidos(): 8,0
