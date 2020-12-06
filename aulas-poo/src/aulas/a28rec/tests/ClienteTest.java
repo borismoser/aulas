@@ -12,7 +12,6 @@ import aulas.a28rec.correcao.Cliente;
 
 public class ClienteTest {
 
-
 	@DisplayName("Cliente não pode ter nome nulo.")
 	@Test
 	void testNewClienteNomeNulo() {
@@ -26,7 +25,7 @@ public class ClienteTest {
 	void testNewCliente() {
 		assertNotNull(new Cliente("Fulano de Tal", 12345));
 	}
-	
+
 	@DisplayName("Get nome cliente.")
 	@Test
 	void testGetNomeCliente() {
@@ -34,15 +33,15 @@ public class ClienteTest {
 		Cliente cli = new Cliente(nome, 12345);
 		assertEquals(nome, cli.getNome());
 	}
-	
+
 	@DisplayName("Get telefone cliente.")
 	@Test
 	void testGetTelefoneCliente() {
 		int fone = 12345;
-		Cliente cli = new Cliente("", fone);
+		Cliente cli = new Cliente("cli", fone);
 		assertEquals(fone, cli.getTelefone());
 	}
-	
+
 	@DisplayName("Clientes iguais.")
 	@Test
 	void testClienteEquals() {
@@ -60,7 +59,7 @@ public class ClienteTest {
 		Cliente cli2 = new Cliente(nome, 123456);
 		assertNotEquals(cli, cli2);
 	}
-	
+
 	@DisplayName("Clientes com nomes diferentes.")
 	@Test
 	void testClienteNotEquals() {
@@ -68,6 +67,5 @@ public class ClienteTest {
 		Cliente cli2 = new Cliente("Fulano de Tall", 123456);
 		assertNotEquals(cli, cli2);
 	}
-	
-}
 
+}

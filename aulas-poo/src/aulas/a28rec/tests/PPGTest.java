@@ -136,11 +136,31 @@ class PPGTest {
 	@DisplayName("Pedidos de pizzas Grandes de sabores iguais em ordens diferentes")
 	@Test
 	void testEqualsOrdemSabor() {
-		PedidoPizzaGrande p = new PedidoPizzaGrande(CLI1, FormaEntrega.BALCAO, 1, Sabor.NAPOLITANA, Sabor.PORTUGUESA,
-				Sabor.BACON);
+		PedidoPizzaGrande p = new PedidoPizzaGrande(CLI1, FormaEntrega.BALCAO, 1, Sabor.BACON, Sabor.PORTUGUESA,
+				Sabor.NAPOLITANA);
 		assertEquals(PPG, p);
 	}
 
+	@DisplayName("Pedidos de pizzas Grandes de sabores iguais em ordens diferentes")
+	@Test
+	void testEqualsOrdemSabor2() {
+		PedidoPizzaGrande p = new PedidoPizzaGrande(CLI1, FormaEntrega.BALCAO, 1, Sabor.BACON, Sabor.CALABRESA,
+				Sabor.NAPOLITANA);
+		PedidoPizzaGrande pp = new PedidoPizzaGrande(CLI1, FormaEntrega.BALCAO, 1, Sabor.NAPOLITANA, Sabor.CALABRESA,
+				Sabor.BACON);
+		assertEquals(pp, p);
+	}
+	
+	@DisplayName("Pedidos de pizzas Grandes de sabores iguais em quantidades diferentes")
+	@Test
+	void testEqualsQuantidadeSabor() {
+		PedidoPizzaGrande p = new PedidoPizzaGrande(CLI1, FormaEntrega.BALCAO, 1, Sabor.BACON, Sabor.BACON,
+				Sabor.NAPOLITANA);
+		PedidoPizzaGrande pp = new PedidoPizzaGrande(CLI1, FormaEntrega.BALCAO, 1, Sabor.NAPOLITANA, Sabor.BACON,
+				Sabor.NAPOLITANA);
+		assertNotEquals(pp, p);
+	}
+	
 	@DisplayName("Get Sabor 1 pizza Grande")
 	@Test
 	void testGetSabor1() {
