@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <interface id="1" language="java" name="aulas.a32av3.qx.Imprimivel" project="aulas-poo" 
-    file="/aulas-poo/src/aulas/a32av3/qx/Imprimivel.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="1" language="java" name="aulas.a32av3.q2.Imprimivel" project="aulas-poo" 
+    file="/aulas-poo/src/aulas/a32av3/q2/Imprimivel.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="373" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="2" language="java" name="aulas.a32av3.qx.FilaImpressao" project="aulas-poo" 
-    file="/aulas-poo/src/aulas/a32av3/qx/FilaImpressao.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="aulas.a32av3.q2.FilaImpressao" project="aulas-poo" 
+    file="/aulas-poo/src/aulas/a32av3/q2/FilaImpressao.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="376" y="510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="aulas.a32av3.qx.ContaBancaria" project="aulas-poo" 
-    file="/aulas-poo/src/aulas/a32av3/qx/ContaBancaria.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="aulas.a32av3.q2.ContaBancaria" project="aulas-poo" 
+    file="/aulas-poo/src/aulas/a32av3/q2/ContaBancaria.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="369" y="124"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="aulas.a32av3.qx.Sequencia" project="aulas-poo" 
-    file="/aulas-poo/src/aulas/a32av3/qx/Sequencia.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="aulas.a32av3.q2.Sequencia" project="aulas-poo" 
+    file="/aulas-poo/src/aulas/a32av3/q2/Sequencia.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="118" y="328"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="aulas.a32av3.qx.Arquivo" project="aulas-poo" 
-    file="/aulas-poo/src/aulas/a32av3/qx/Arquivo.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="aulas.a32av3.q2.Arquivo" project="aulas-poo" 
+    file="/aulas-poo/src/aulas/a32av3/q2/Arquivo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="117" y="130"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="aulas.a32av3.qx.Impressora" project="aulas-poo" 
-    file="/aulas-poo/src/aulas/a32av3/qx/Impressora.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="aulas.a32av3.q2.Impressora" project="aulas-poo" 
+    file="/aulas-poo/src/aulas/a32av3/q2/Impressora.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="181" y="491"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,26 +55,30 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="7">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <realization id="8">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <realization id="9">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <association id="10">    
+  <association id="7">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="11" name="fila"/>      
-      <multiplicity id="12" minimum="0" maximum="2147483647"/>    
+      <attribute id="8" name="fila">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="9" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="10">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <realization id="11">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <realization id="12">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

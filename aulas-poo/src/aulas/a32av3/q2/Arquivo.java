@@ -1,4 +1,4 @@
-package aulas.a32av3.qx;
+package aulas.a32av3.q2;
 
 public class Arquivo implements Imprimivel {
 
