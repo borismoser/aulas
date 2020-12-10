@@ -33,15 +33,33 @@ public class Fabrica {
 	}
 
 	public int qtVeiculosCarga() {
-		return 0;
+		int qt = 0;
+		for (Veiculo v : veiculos) {
+			if (v instanceof Carga) {
+				qt++;
+			}
+		}
+		return qt;
 	}
 
 	public int qtVeiculosTransporte() {
-		return 0;
+		int qt = 0;
+		for (Veiculo v : veiculos) {
+			if (v instanceof Transporte) {
+				qt++;
+			}
+		}
+		return qt;
 	}
 
 	public int qtVeiculosCorrida() {
-		return 0;
+		int qt = 0;
+		for (Veiculo v : veiculos) {
+			if (v instanceof Corrida) {
+				qt++;
+			}
+		}
+		return qt;
 	}
 
 }
