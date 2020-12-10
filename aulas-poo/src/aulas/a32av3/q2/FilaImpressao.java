@@ -5,18 +5,19 @@ import java.util.ArrayList;
 public class FilaImpressao {
 
 	private ArrayList<Imprimivel> fila;
-	
+
 	public FilaImpressao() {
-		// TODO Auto-generated constructor stub
+		fila = new ArrayList<>();
 	}
 
 	public void incluirNaFila(Imprimivel imp) {
 		fila.add(imp);
 	}
-	
+
 	public void imprimirTodos() {
+		Impressora prn = new Impressora();
 		for (Imprimivel imp : fila) {
-			(new Impressora()).imprimir(imp);
+			prn.imprimir(imp);
 		}
 	}
 }

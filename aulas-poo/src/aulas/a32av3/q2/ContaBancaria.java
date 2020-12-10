@@ -20,8 +20,7 @@ public class ContaBancaria implements Imprimivel{
 
 	@Override
 	public String formatoImpressao() {
-		// TODO Auto-generated method stub
-		return null;
+		return String.format("Nome: %s. Saldo: R$ %,5.2f", getTitular(), getSaldo());
 	}
 
 }

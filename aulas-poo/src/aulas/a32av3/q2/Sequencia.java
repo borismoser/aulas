@@ -12,8 +12,12 @@ public class Sequencia implements Imprimivel {
 
 	@Override
 	public String formatoImpressao() {
-		// TODO Auto-generated method stub
-		return null;
+		String s = "";
+		for (int x = inicio; x < fim; x++) {
+			s += x + ", ";
+		}
+		s += fim;
+		return s;
 	}
 
 }

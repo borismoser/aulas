@@ -23,8 +23,7 @@ public class Arquivo implements Imprimivel {
 
 	@Override
 	public String formatoImpressao() {
-		// TODO Auto-generated method stub
-		return null;
+		return getConteudo();
 	}
 
 }
