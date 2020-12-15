@@ -1,4 +1,4 @@
-package arquivos.lorem;
+package aulas.a34.arq;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class LerImprimirArquivo {
 
 	public static void main(String[] args) {
-		String lorem = "D:\\eclipse\\workspace\\git\\aulas-poo\\aulas-poo\\src\\arquivos\\lorem\\lorem-ipsum.txt";
+		String lorem = "./src/aulas/a34/arq/lorem-ipsum.txt";
 		exemploTryFinally(lorem);
 		exemploTryWithResources(lorem);
 	}

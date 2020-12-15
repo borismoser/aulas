@@ -1,4 +1,4 @@
-package arquivos;
+package aulas.a34.dir;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;

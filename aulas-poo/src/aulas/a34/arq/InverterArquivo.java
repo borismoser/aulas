@@ -1,4 +1,4 @@
-package arquivos.lorem;
+package aulas.a34.arq;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -13,8 +13,8 @@ import java.util.List;
 public class InverterArquivo {
 
 	public static void main(String[] args) {
-		String lorem = "D:\\eclipse\\workspace\\git\\aulas-poo\\aulas-poo\\src\\arquivos\\lorem\\lorem-ipsum.txt";
-		String lorem2 = "D:\\eclipse\\workspace\\git\\aulas-poo\\aulas-poo\\src\\arquivos\\lorem\\lorem-ipsum-inv.txt";
+		String lorem = "./src/aulas/a34/arq/lorem-ipsum.txt";
+		String lorem2 = "./src/aulas/a34/arq/lorem-ipsum-inv.txt";
 		inverterArquivoNEW(lorem, lorem2);
 		inverterArquivoAPPEND(lorem, lorem2);
 	}
